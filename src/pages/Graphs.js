@@ -208,21 +208,13 @@ function Graphs() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Flex
-        marginLeft={251}
-        justifyContent={"space-between"}
-        flexDirection={"column"}
-      >
+      <Flex marginLeft={251} alignItems="flex-start" flexDirection={"column"}>
         <Flex paddingTop={55} paddingLeft={70}>
           <Text fontSize={34} color="#5F6AC4">
             Graphs
           </Text>
         </Flex>
-        <Flex
-          paddingLeft={70}
-          paddingRight={140}
-          justifyContent={"space-between"}
-        >
+        <Flex paddingLeft={70} justifyContent={"space-between"}>
           <Box>
             <Flex marginTop={40}>
               <Box style={styles} width={431} height={535} borderRadius={10}>
@@ -334,7 +326,7 @@ function Graphs() {
             </Flex>
           </Box>
           <Box>
-            <Flex marginTop={40}>
+            <Flex marginTop={40} paddingLeft={100}>
               <Box style={styles} width={431} height={535} borderRadius={10}>
                 <Flex
                   justifyContent={"space-between"}
