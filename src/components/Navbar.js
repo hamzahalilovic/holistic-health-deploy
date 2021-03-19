@@ -7,8 +7,13 @@ import LogoIcon from "../assets/logo.svg";
 
 const styles = {
   position: "sticky",
+  marginTop: -10,
+  mraginRight: -240,
   top: 0,
+  right: 0,
   zIndex: 1,
+  width: "100%",
+  alignItems: "center",
 };
 
 function Navbar() {
@@ -23,14 +28,7 @@ function Navbar() {
       justifyContent={"space-between"}
       style={styles}
     >
-      <Flex
-        width={200}
-        alignItems={"center"}
-        marginBottom={37}
-        top={0}
-        left={0}
-        postion={"sticky"}
-      >
+      <Flex marginBottom={37}>
         <img src={LogoIcon} alt="React Logo" />
         <Flex paddingLeft={20}>
           <Link to="/" style={{ textDecoration: "none" }}>

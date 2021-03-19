@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Text, Flex } from "@blend-ui/core";
 
 import Box from "@blend-ui/core/dist/esm/Box";
@@ -28,7 +27,7 @@ function ProgressCard({ title, subtitle, color, value, icon }) {
       <Flex
         flex={1}
         width="353px"
-        height="137px"
+        height="95px"
         borderRadius={10}
         style={styles}
         padding={20}

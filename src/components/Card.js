@@ -41,12 +41,13 @@ function Card({
         style={styles}
         paddingLeft={20}
         paddingRight={20}
-        paddingBottom={20}
-        paddingTop={5}
+        paddingBottom={10}
+        // paddingTop={5}
         bg={color}
+        alignItems="center"
       >
         <Box>
-          <Flex paddingBottom={10}>
+          <Flex paddingBottom={10} marginTop={-10}>
             <img src={smallIcon} />
             <Text fontSize="12px" color="#5F6AC4" paddingLeft={5}>
               {precentage}

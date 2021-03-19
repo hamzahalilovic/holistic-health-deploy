@@ -313,7 +313,7 @@ function Dashboard() {
                           onChange={handleTimeChange}
                         />
                       </div>
-                      <div style={{ width: 100 }}>
+                      <div style={{ width: 100, paddingRight: 105 }}>
                         <Select
                           defaultValue="Device"
                           placeholder="Device"
@@ -381,8 +381,8 @@ function Dashboard() {
                   value7={value7}
                 />
               </Flex>
-              <Flex paddingLeft={40}>
-                <Box paddingRight={20}>
+              <Flex paddingLeft={30}>
+                <Box paddingRight={10}>
                   <Card
                     icon={SleepIcon}
                     smallIcon={GreenArrowIcon}
@@ -425,7 +425,7 @@ function Dashboard() {
               </Text>
             </Box>
             <Flex>
-              <Box height={299}>
+              <Box height={299} marginBottom={0} alignItems="center">
                 <ProgressCard
                   title={calories + " kcal"}
                   subtitle="out of 100 000"
@@ -456,6 +456,13 @@ function Dashboard() {
                   value={sleep / 240}
                   icon={SleepIcon}
                 /> */}
+                <ProgressCard
+                  title={(distance / 1000).toFixed(1) + " km"}
+                  subtitle="out of 500"
+                  color="#38B2AC"
+                  value={distance / 5000}
+                  icon={RunIcon}
+                />
               </Box>
               {/* <Box>
                 <ProgressCard
