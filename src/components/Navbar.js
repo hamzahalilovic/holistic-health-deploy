@@ -39,7 +39,7 @@ function Navbar() {
         </Flex>
       </Flex>
       <div>
-        <Flex alignItems={"center"} marginTop={-13}>
+        <Flex alignItems={"center"} marginTop={-13} paddingRight={67}>
           <Text color={"#5F6AC4"} fontSize={16}>
             Hello,{" "}
           </Text>
