@@ -7,14 +7,14 @@ import LogoIcon from "../assets/logo.svg";
 
 const styles = {
   position: "sticky",
-  top: 10,
+  top: 0,
+  zIndex: 1,
 };
 
 function Navbar() {
   return (
     <Flex
       height="69px"
-      width={"100%"}
       bg={"#F4F4F8"}
       paddingLeft={37}
       paddingTop={21}
@@ -33,7 +33,7 @@ function Navbar() {
       >
         <img src={LogoIcon} alt="React Logo" />
         <Flex paddingLeft={20}>
-          <Link to="/">
+          <Link to="/" style={{ textDecoration: "none" }}>
             <Text color={"#5F6AC4"} fontSize={18}>
               Health app
             </Text>

@@ -47,8 +47,8 @@ function Card({
       >
         <Box>
           <Flex paddingBottom={10}>
-            <img src={smallIcon} />{" "}
-            <Text fontSize="12px" color="#5F6AC4">
+            <img src={smallIcon} />
+            <Text fontSize="12px" color="#5F6AC4" paddingLeft={5}>
               {precentage}
             </Text>
           </Flex>

@@ -1,14 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { CircularProgress, CircularProgressLabel } from "@blend-ui/progress";
-import { ThemeProvider, Text, Avatar, Box, Flex } from "@blend-ui/core";
-import { BlendIcon } from "@blend-ui/icons";
-import { flexDirection } from "styled-system";
+import { Flex } from "@blend-ui/core";
+
 import DashboardIcon from "../assets/dashboard.svg";
 import GraphsIcon from "../assets/graphs.svg";
-
-import { Colors } from "../styles/Colors";
 
 function Sidebar() {
   return (
@@ -20,36 +16,52 @@ function Sidebar() {
       width={251}
       position={"fixed"}
       bg={"#F4F4F8"}
+      zIndex={1}
     >
       <Flex marginBottom={40} flexDirecton={"row"}>
         <Flex>
           <Flex marginRight={16}>
             <img src={DashboardIcon} alt="React Logo" />
           </Flex>
-          <Link to="/">
-            <Text color={"#5F6AC4"}>Dashboard</Text>
-          </Link>
+          <NavLink
+            exact
+            to="/"
+            style={{
+              textDecoration: "none",
+              fontWeight: 400,
+              color: "#95A4B7",
+            }}
+            activeStyle={{
+              fontWeight: 700,
+              color: "#5F6AC4",
+            }}
+          >
+            Dashboard
+          </NavLink>
         </Flex>
       </Flex>
       <Flex>
         <Flex marginRight={16}>
           <img src={GraphsIcon} alt="React Logo" />
         </Flex>
-        <Link to="/graphs">
-          <Text color={"#5F6AC4"}>Graphs</Text>
-        </Link>
+        <NavLink
+          exact
+          to="/graphs"
+          style={{
+            textDecoration: "none",
+            fontWeight: 400,
+            color: "#95A4B7",
+          }}
+          activeStyle={{
+            fontWeight: 700,
+            color: "#5F6AC4",
+          }}
+        >
+          Graphs
+        </NavLink>
       </Flex>
     </Flex>
   );
 }
 
 export default Sidebar;
-// style={{
-//   backgroundColor: "#F4F4F8",
-//   width: 251,
-//   paddingLeft: 37,
-//   paddingTop: 57,
-//   height: "100vh",
-//   flexDirection: "row",
-//   position: "fixed",
-// }}

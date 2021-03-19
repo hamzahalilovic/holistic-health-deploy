@@ -15,7 +15,20 @@ import {
 import { extendTheme, ThemeProvider } from "@chakra-ui/react";
 import Select from "react-select";
 
-import { Device } from "../data/dataFunctions";
+import {
+  timeOptions,
+  deviceOptions,
+  dataOptions,
+  getDeviceData,
+  getDeviceDataTwo,
+  customTheme,
+} from "../data/helper";
+
+import {
+  selectStyle,
+  selectStyleOutline,
+  selectStyleSmall,
+} from "../styles/styles";
 
 // -----------------------FUNCTIONS----------------------
 
@@ -36,64 +49,11 @@ function sumProperty(arr, type) {
 
 const theme = extendTheme({ config });
 
-function customTheme(theme) {
-  return {
-    ...theme,
-    colors: {
-      ...theme.colors,
-      primary25: "#5F6AC4",
-      primary: "#5F6AC4",
-      borderColor: "white",
-    },
-  };
-}
-
 // -------------DATA----------------
 
 const styles = {
   boxShadow: " 0px 5px 20px #F0F4F8",
 };
-
-const deviceOptions = [
-  { label: "Fitbit", value: "fitbit" },
-  { label: "Oura", value: "oura" },
-];
-
-const timeOptions = [
-  { label: "This Week", value: "thisWeek" },
-  { label: "Last Week", value: "lastWeek" },
-  { label: "This Month", value: "thisMonth" },
-];
-
-const dataOptions = [
-  { label: "Calories", value: "totalCalories" },
-  { label: "Active Calories", value: "activeCalories" },
-  { label: "Steps", value: "totalSteps" },
-  { label: "Total Distance", value: "totalDistance" },
-  { label: "Inactive Minutes", value: "inactiveMinutes" },
-  { label: "Low Active", value: "lowActiveMinutes" },
-  { label: "Medium Active", value: "mediumActiveMinutes" },
-  { label: "High Active", value: "highActiveMinutes" },
-  { label: "Light Sleep", value: "lightSleepTime" },
-  { label: "Deep Sleep", value: "deepSleepTime" },
-  { label: "Time in Bed", value: "timeSpentInBed" },
-  { label: "Total Sleep", value: "totalSleepTime" },
-  { label: "REM Sleep Time", value: "REMSleepTime" },
-  { label: "Awake Time", value: "totalAwakeTime" },
-  { label: "Restless Sleep", value: "restlessSleep" },
-  { label: "Average HRV", value: "averageHRV" },
-  { label: "Average Resting HR", value: "averageRestingHR" },
-  { label: "Respiratory Rate", value: "respiratoryRate" },
-  { label: "Temperature Deviation", value: "temperatureDeviation" },
-];
-
-function getDeviceData(device) {
-  return Device(device);
-}
-
-function getDeviceDataTwo(deviceTwo) {
-  return Device(deviceTwo);
-}
 
 const defaultDevice = deviceOptions[0];
 
@@ -271,12 +231,12 @@ function Graphs() {
                   alignItems={"center"}
                   paddingLeft={30}
                   paddingRight={30}
-                  paddingTop={30}
+                  paddingTop={20}
                 >
                   <Flex>
-                    <div style={{ minWidth: 180 }}>
+                    <div style={{ minWidth: 200 }}>
                       <Select
-                        styles={customTheme}
+                        styles={selectStyle}
                         options={dataOptions}
                         defaultValue="Data"
                         placeholder="Data"
@@ -308,6 +268,7 @@ function Graphs() {
                       <div style={{ minWidth: 150 }}>
                         <Select
                           options={timeOptions}
+                          styles={selectStyleSmall}
                           defaultValue="Time"
                           placeholder="Time"
                           onChange={handleTimeChange}
@@ -320,6 +281,7 @@ function Graphs() {
                     <div style={{ minWidth: 100 }}>
                       <Select
                         options={deviceOptions}
+                        styles={selectStyleOutline}
                         defaultValue="Device"
                         placeholder="Device"
                         onChange={handleDeviceChange}
@@ -379,12 +341,13 @@ function Graphs() {
                   alignItems={"center"}
                   paddingLeft={30}
                   paddingRight={30}
-                  paddingTop={30}
+                  paddingTop={20}
                 >
                   <Flex>
                     <div style={{ minWidth: 180 }}>
                       <Select
                         options={dataOptions}
+                        styles={selectStyle}
                         defaultValue="Data"
                         onChange={handleDataChangeTwo}
                         width="100px"
@@ -415,6 +378,7 @@ function Graphs() {
                       <div style={{ minWidth: 150 }}>
                         <Select
                           options={timeOptions}
+                          styles={selectStyleSmall}
                           defaultValue="Time"
                           onChange={handleTimeChangeTwo}
                           width="100px"
@@ -427,6 +391,7 @@ function Graphs() {
                     <div style={{ minWidth: 100 }}>
                       <Select
                         options={deviceOptions}
+                        styles={selectStyleOutline}
                         defaultValue="Device"
                         onChange={handleDeviceChangeTwo}
                         width="100px"

@@ -1,8 +1,13 @@
 import React from "react";
+import styled from "styled-components";
+import { ReactComponent as Logo } from "./assets/prifina.svg";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 //import Image from "./assets/fingerpori.png";
+
+import { usePrifina } from "@prifina/hooks";
+import Faker from "@prifina/faker";
 
 import { ThemeProvider } from "@blend-ui/core";
 
