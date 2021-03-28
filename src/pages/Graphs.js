@@ -152,10 +152,10 @@ function Graphs() {
   const handleTimeChange = (value) => {
     const time = value.value;
     if (time === "thisWeek") {
-      const array = graphOne.slice(21, 28);
+      const array = graphOne.slice(23, 30);
       setUpdatedGraphOne(array);
     } else if (time === "lastWeek") {
-      const array = graphOne.slice(14, 21);
+      const array = graphOne.slice(16, 23);
       setUpdatedGraphOne(array);
     } else {
       setUpdatedGraphOne(graphOne);
@@ -165,10 +165,10 @@ function Graphs() {
   const handleTimeChangeTwo = (value) => {
     const timeTwo = value.value;
     if (timeTwo === "thisWeek") {
-      const array = graphTwo.slice(21, 28);
+      const array = graphTwo.slice(23, 30);
       setUpdatedGraphTwo(array);
     } else if (timeTwo === "lastWeek") {
-      const array = graphTwo.slice(14, 21);
+      const array = graphTwo.slice(16, 23);
       setUpdatedGraphTwo(array);
     } else {
       setUpdatedGraphTwo(graphTwo);

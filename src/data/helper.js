@@ -60,7 +60,7 @@ export const dataOptions = [
   { label: "Awake Time", value: "totalAwakeTime" },
   { label: "Restless Sleep", value: "restlessSleep" },
   { label: "Average HRV", value: "averageHRV" },
-  { label: "Average Resting HR", value: "averageRestingHR" },
+  { label: "Avg Resting HR", value: "averageRestingHR" },
   { label: "Respiratory Rate", value: "respiratoryRate" },
-  { label: "Temperature Deviation", value: "temperatureDeviation" },
+  { label: "Temp Deviation", value: "temperatureDeviation" },
 ];

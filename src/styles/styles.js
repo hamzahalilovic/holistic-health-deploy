@@ -66,7 +66,7 @@ export const selectStyle = {
     ...provided,
     color: "#5F6AC4",
     fontWeight: 700,
-    fontSize: 22,
+    fontSize: 18,
     lineHeight: 22,
   }),
 };
